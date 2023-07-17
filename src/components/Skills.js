@@ -41,7 +41,7 @@ const Skills = () => {
                             Skills
                         </h2>
                         <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas odio augue, varius sit amet auctor quis, venenatis id arcu.<br></br> Mauris vel cursus felis. Nulla facilisi. 
+                        As a web developer, I have cultivated a diverse set of skills that allow me to create dynamic and user-friendly websites. <br></br>Here are the key areas in which I excel:
                         </p>
                         <Carousel responsive={responsive} infinite={true} className='skill-slider'>
                             <div className='item'>
@@ -50,15 +50,15 @@ const Skills = () => {
                             </div>
                             <div className='item'>
                                 <img src={meter2} alt='Image' />
-                                <h5>Brand Identity</h5>
+                                <h5>Data Analysis</h5>
                             </div>
                             <div className='item'>
                                 <img src={meter3} alt='Image' />
-                                <h5>Logo Design</h5>
+                                <h5>Clients Communication</h5>
                             </div>
                             <div className='item'>
                                 <img src={meter1} alt='Image' />
-                                <h5>Web Development</h5>
+                                <h5>Workflow Optimization</h5>
                             </div>
                         </Carousel>
                     </div>

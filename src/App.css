@@ -118,9 +118,10 @@ span.navbar-text {
   margin-left: 14px;
 }
 .social-icon a {
-  width: 42px;
-  height: 42px;
-  background: rgba(217, 217, 217, 0.1);
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 99, 71, 0);
+  /* background: rgba(217, 217, 217, 0.1); */
   display: inline-flex;
   border-radius: 50%;
   margin-right: 6px;
@@ -137,13 +138,13 @@ span.navbar-text {
   background-color: #ffffff;
   border-radius: 50%;
   transform: scale(0);
-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 .social-icon a:hover::before {
   transform: scale(1);
 }
 .social-icon a img {
-width: 40%;
+width: 80%;
 z-index: 1;
 transition: 0.3s ease-in-out;
 }
@@ -161,7 +162,7 @@ position: relative;
 background-color: transparent;
 transition: 0.3s ease-in-out;
 }
-.navbar-text button span {
+.square {
 z-index: 1;
 }
 .navbar-text button::before {
@@ -267,11 +268,13 @@ border-color: transparent;
 .banner button {
   color: white;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 25px;
   margin-top: 60px;
   letter-spacing: 0.8px;
   display: flex;
   align-items: center;
+  background-color: transparent;
+  border: none;
 }
 .banner button svg {
   font-size: 25px;
@@ -417,9 +420,11 @@ border-color: transparent;
 }
 .proj-imgbx {
   position: relative;
-  border-radius: 30px;
+  border-radius: 20px;
   overflow: hidden;
   margin-bottom: 24px;
+  align-content: center;
+  width: 100%;
 }
 .proj-imgbx::before {
   content: "";
@@ -433,6 +438,7 @@ border-color: transparent;
 .proj-imgbx:hover::before {
   height: 100%;
 }
+
 .proj-txtx {
   position: absolute;
   text-align: center;
@@ -540,6 +546,9 @@ border-color: transparent;
   width: 100%;
 }
 
+#message {
+  padding-top: 20px;
+}
 
 /************ Footer Css ************/
 .footer {
@@ -559,4 +568,5 @@ border-color: transparent;
   color: #B8B8B8;
   letter-spacing: 0.5px;
   margin-top: 20px;
+  text-align: center;
 }  

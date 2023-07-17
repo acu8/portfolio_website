@@ -1,9 +1,15 @@
 import { Container, Row, Col, Tab} from "react-bootstrap";
 import Nav from 'react-bootstrap/Nav';
 import ProjectCard from "./ProjectCard";
+import CertificateCard from "./CertificateCard";
 import projImg1 from "../assets/img/project-img1.png";
 import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/project-img3.png";
+import toeic from "../assets/img/Toeic.png";
+import javaSilver from "../assets/img/JS.png"
+import bookKeep from "../assets/img/account.png";
+
+
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -25,25 +31,31 @@ const Projects = () => {
           description: "Design & Development",
           imgUrl: projImg3,
         },
-        {
-          title: "Business Startup",
-          description: "Design & Development",
-          imgUrl: projImg1,
-        },
-        {
-          title: "Business Startup",
-          description: "Design & Development",
-          imgUrl: projImg2,
-        },
-        {
-          title: "Business Startup",
-          description: "Design & Development",
-          imgUrl: projImg3,
-        },
+        
       ];
 
+      const certificates = [
+        {
+          title: "TOEIC SCORE 935",
+          description: "Advanced proficiency of English",
+          imgUrl: toeic,
+        },
+        {
+          title: "Java Silver",
+          description: "Oracle Certifiled Java SE 11 Programmer",
+          imgUrl: javaSilver,
+        },
+        {
+          title: "Bookkeeping 3rd grade",
+          description: "The Official Business Skills Test in Bookkeeping",
+          imgUrl: bookKeep,
+        },
+        
+      ];
+
+
       return (
-        <div className="project" id="project">
+        <div className="project" id="projects">
     <Container>
         <Row>
           <Col size={12}>
@@ -55,13 +67,13 @@ const Projects = () => {
                 <Tab.Container id="projects-tabs" defaultActiveKey="first">
                   <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                     <Nav.Item>
-                      <Nav.Link eventKey="first">Tab 1</Nav.Link>
+                      <Nav.Link eventKey="first">Projects</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                      <Nav.Link eventKey="second">Tab 2</Nav.Link>
+                      <Nav.Link eventKey="second">Certificate</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                      <Nav.Link eventKey="third">Tab 3</Nav.Link>
+                      <Nav.Link eventKey="third">Under Construction...</Nav.Link>
                     </Nav.Item>
                   </Nav>
                   <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
@@ -79,12 +91,24 @@ const Projects = () => {
                         }
                       </Row>
                     </Tab.Pane>
-                    <Tab.Pane eventKey="section">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
+                    <Tab.Pane eventKey="second">
+                      <Row>
+                        {
+                          certificates.map((certificate, index) => {
+                            return (
+                              <CertificateCard
+                                key={index}
+                                {...certificate}
+                                />
+                            )
+                          })
+                        }
+                      </Row>
                     </Tab.Pane>
                     <Tab.Pane eventKey="third">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
-                    </Tab.Pane>
+                      <p>準備中です
+                      </p>
+                      </Tab.Pane>
                   </Tab.Content>
                 </Tab.Container>
               </div>}
